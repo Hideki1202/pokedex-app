@@ -100,4 +100,14 @@ public class PokemonDetailsResponse {
             }
         }
     }
+    public int getTotalStats() {
+        int total = 0;
+        if (stats != null) {
+            for (StatSlot s : stats) {
+                total += s.getBaseStat();
+            }
+        }
+        return total;
+    }
+
 }
